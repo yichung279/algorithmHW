@@ -14,7 +14,7 @@ int main(){
   }
 }
 
-void MergeiSort(int* array, int p, int r){
+void MergeSort(int* array, int p, int r){
   if(p<r){
     int q = floor((p + r) / 2);
     MergeSort(array, p, q);
@@ -39,6 +39,7 @@ void Merge(int* array, int p, int q, int r){
       array[i] = L[I];
       I++;
     }else{
+      array[i] = L[J];
       J++;
     }
   }
