@@ -29,7 +29,7 @@ void Merge(int* array, int p, int q, int r){
   int L[n1 + 1];
   int R[n2 + 1];
   for(int i = 0; i < n1; i++) L[i]=array[p + i];
-  for(int i = 0; i < n2; i++) R[i]=array[q + 1 + 1];
+  for(int i = 0; i < n2; i++) R[i]=array[q + i + 1];
   L[n1] = 0x7fffffff;
   R[n2] = 0x7fffffff;
   int I = 0;
@@ -38,8 +38,8 @@ void Merge(int* array, int p, int q, int r){
     if(L[I]<R[J]){
       array[i] = L[I];
       I++;
-    }else{
-      array[i] = L[J];
+    }else{   
+      array[i] = R[J];
       J++;
     }
   }
