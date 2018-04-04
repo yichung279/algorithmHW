@@ -13,7 +13,7 @@ int str2int(string);
 
 int main(){
   ifstream fin;
-  fin.open("nearlySort_1000.txt");
+  fin.open("nearlySort_10000.txt");
   string line;
   getline(fin,line);
 
